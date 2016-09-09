@@ -140,7 +140,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     // Do any initialization that's common to both -initWithFrame: and -initWithCoder: in this method
     
     // Set the X Axis label font
-    _labelFont = [UIFont fontWithName:DEFAULT_FONT_NAME size:13];
+    _labelFont = [UIFont fontWithName: DEFAULT_FONT_NAME size:13];
     
     // Set Animation Values
     _animationGraphEntranceTime = 1.5;
@@ -345,7 +345,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
             if ([self.delegate respondsToSelector:@selector(popUpViewForLineGraph:)]) {
                 self.popUpView = [self.delegate popUpViewForLineGraph:self];
                 self.usingCustomPopupView = YES;
-                self.popUpView.alpha = 0;
+                self.popUpView.alpha = 0; // não é esse
                 [self addSubview:self.popUpView];
             } else {
                 NSString *maxValueString = [NSString stringWithFormat:self.formatStringForValues, [self calculateMaximumPointValue].doubleValue];
@@ -458,6 +458,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
 
     // Draw the Y-Axis
     if (self.enableYAxisLabel) [self drawYAxis];
+
 }
 
 - (void)drawDots {
@@ -545,7 +546,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
                 } else {
                     if (self.displayDotsWhileAnimating) {
                         [UIView animateWithDuration:(float)self.animationGraphEntranceTime/numberOfPoints delay:(float)i*((float)self.animationGraphEntranceTime/numberOfPoints) options:UIViewAnimationOptionCurveLinear animations:^{
-                            circleDot.alpha = 1.5; //aquiiii
+                            circleDot.alpha = _alphaCircleDots; //aquiiii
                         } completion:^(BOOL finished) {
                             if (self.alwaysDisplayDots == NO && self.displayDotsOnly == NO) {
                                 [UIView animateWithDuration:0.3 delay:0 options:UIViewAnimationOptionCurveEaseOut animations:^{
@@ -883,6 +884,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
 }
 
 - (void)drawYAxis {
+    
     for (UIView *subview in [self subviews]) {
         if ([subview isKindOfClass:[UILabel class]] && subview.tag == LabelYAxisTag2000 ) {
             [subview removeFromSuperview];
@@ -895,7 +897,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     CGRect frameForLabelYAxis;
     CGFloat xValueForCenterLabelYAxis;
     NSTextAlignment textAlignmentForLabelYAxis;
-    
+
     if (self.positionYAxisRight) {
         frameForBackgroundYAxis = CGRectMake(self.frame.size.width - self.YAxisLabelXOffset, 0, self.YAxisLabelXOffset, self.frame.size.height);
         frameForLabelYAxis = CGRectMake(self.frame.size.width - self.YAxisLabelXOffset - 5, 0, self.YAxisLabelXOffset - 5, 15);
@@ -907,13 +909,13 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
         xValueForCenterLabelYAxis = self.YAxisLabelXOffset/2;
         textAlignmentForLabelYAxis = NSTextAlignmentRight;
     }
-    
+
     UIView *backgroundYaxis = [[UIView alloc] initWithFrame:frameForBackgroundYAxis];
     backgroundYaxis.tag = BackgroundYAxisTag2100;
     if (self.colorBackgroundYaxis == nil) backgroundYaxis.backgroundColor = self.colorTop;
     else backgroundYaxis.backgroundColor = self.colorBackgroundYaxis;
     backgroundYaxis.alpha = self.alphaBackgroundYaxis;
-    [self addSubview:backgroundYaxis];
+    [self addSubview:backgroundYaxis]; // aquiiiiii
     
     NSMutableArray *yAxisLabels = [NSMutableArray arrayWithCapacity:0];
     [yAxisLabelPoints removeAllObjects];
@@ -1038,7 +1040,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
         [label removeFromSuperview];
     }
     
-    [self didFinishDrawingIncludingYAxis:YES];  
+    [self didFinishDrawingIncludingYAxis:YES];
 }
 
 /// Area on the graph that doesn't include the axes
@@ -1099,8 +1101,8 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     NSNumber *value = dataPoints[index]; // @((NSInteger) circleDot.absoluteValue)
     NSString *formattedValue = [NSString stringWithFormat:self.formatStringForValues, value.doubleValue];
     permanentPopUpLabel.text = [NSString stringWithFormat:@"%@%@%@", prefix, formattedValue, suffix];
-    
     permanentPopUpLabel.font = self.labelFont;
+    permanentPopUpLabel.textColor = _colorTextPopUpLabel;
     permanentPopUpLabel.backgroundColor = [UIColor clearColor];
     [permanentPopUpLabel sizeToFit];
     permanentPopUpLabel.center = CGPointMake(self.xCenterLabel, circleDot.center.y - circleDot.frame.size.height/2 - 15);
@@ -1108,7 +1110,7 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     
     BEMPermanentPopupView *permanentPopUpView = [[BEMPermanentPopupView alloc] initWithFrame:CGRectMake(0, 0, permanentPopUpLabel.frame.size.width + 7, permanentPopUpLabel.frame.size.height + 2)];
     permanentPopUpView.backgroundColor = self.colorBackgroundPopUplabel;
-    permanentPopUpView.alpha = 0;
+    permanentPopUpView.alpha = 0; // Interessante
     permanentPopUpView.layer.cornerRadius = 3;
     permanentPopUpView.tag = PermanentPopUpViewTag3100;
     permanentPopUpView.center = permanentPopUpLabel.center;
@@ -1139,11 +1141,11 @@ typedef NS_ENUM(NSInteger, BEMInternalTags)
     
     if (self.animationGraphEntranceTime == 0) {
         permanentPopUpLabel.alpha = 1;
-        permanentPopUpView.alpha = 0.7;
+        permanentPopUpView.alpha = 0.7; // não é esse
     } else {
         [UIView animateWithDuration:0.5 delay:self.animationGraphEntranceTime options:UIViewAnimationOptionCurveLinear animations:^{
             permanentPopUpLabel.alpha = 1;
-            permanentPopUpView.alpha = 0.7;
+            permanentPopUpView.alpha = _alphaPopUpView; // Esse aqui
         } completion:nil];
     }
 }

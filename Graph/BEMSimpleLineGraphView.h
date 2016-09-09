@@ -29,8 +29,6 @@ NS_ASSUME_NONNULL_BEGIN
 /// Simple line graph / chart UIView subclass for iOS apps. Creates beautiful line graphs (without huge memory impacts) using QuartzCore.
 IB_DESIGNABLE @interface BEMSimpleLineGraphView : UIView <UIGestureRecognizerDelegate>
 
-
-
 //------------------------------------------------------------------------------------//
 //----- DELEGATE ---------------------------------------------------------------------//
 //------------------------------------------------------------------------------------//
@@ -356,6 +354,15 @@ IB_DESIGNABLE @interface BEMSimpleLineGraphView : UIView <UIGestureRecognizerDel
 
 /// When set to YES, dots will be displayed at full opacity and no line will be drawn through the dots. Default value is NO.
 @property (nonatomic) BOOL displayDotsOnly;
+
+//Modificar alpha
+@property (nonatomic) CGFloat alphaPopUpView;
+
+//Cor da minha label
+@property (nonatomic) UIColor *colorTextPopUpLabel;
+
+//Alpha dos meus pontos no gráfico
+@property (nonatomic) CGFloat alphaCircleDots;
 
 
 @end

@@ -49,12 +49,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="MJL-gV-5Z9" firstAttribute="centerX" secondItem="kVX-Tq-r9j" secondAttribute="centerX" id="6GS-XA-Y9B"/>
-                            <constraint firstItem="MJL-gV-5Z9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="RlL-QH-OqI"/>
+                            <constraint firstItem="MJL-gV-5Z9" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="V8s-TZ-sGv"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MJL-gV-5Z9" secondAttribute="bottom" constant="77" id="YWg-ay-S5I"/>
                             <constraint firstItem="kVX-Tq-r9j" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YwC-l5-VFy"/>
-                            <constraint firstItem="MJL-gV-5Z9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="384" id="b7j-Vz-mzK"/>
+                            <constraint firstItem="MJL-gV-5Z9" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="384" id="ZHu-sH-7Hb"/>
                             <constraint firstItem="kVX-Tq-r9j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="108" id="dvd-Sa-46P"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="MJL-gV-5Z9" secondAttribute="bottom" constant="77" id="vaX-AR-mDH"/>
+                            <constraint firstItem="MJL-gV-5Z9" firstAttribute="centerX" secondItem="kVX-Tq-r9j" secondAttribute="centerX" id="tHg-hy-ehc"/>
                         </constraints>
                     </view>
                     <connections>

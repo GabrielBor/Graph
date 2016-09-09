@@ -37,23 +37,24 @@ class GraphViewController: UIViewController, BEMSimpleLineGraphDataSource, BEMSi
         myGraph.widthLine = 5
         myGraph.alwaysDisplayDots = true
         myGraph.alwaysDisplayPopUpLabels = true
+        myGraph.colorBackgroundPopUplabel = UIColor.whiteColor()
+        myGraph.alphaPopUpView = 0
+        myGraph.colorTextPopUpLabel = UIColor.whiteColor()
         myGraph.sizePoint = 10
-        
-        //Bottom and Top
-        myGraph.alphaBottom = 0.8
+        myGraph.alphaCircleDots = 1
         
         //AnimationGraph
-        myGraph.animationGraphStyle = BEMLineAnimation.Fade
+        myGraph.animationGraphStyle = BEMLineAnimation.Draw
         myGraph.animationGraphEntranceTime = 1
         
         // Enable and disable various graph properties and axis displays
-        myGraph.enableTouchReport = true;
-        myGraph.enablePopUpReport = true;
-        myGraph.enableYAxisLabel = true;
-        myGraph.autoScaleYAxis = true;
-        myGraph.enableReferenceXAxisLines = true;
-        myGraph.enableReferenceYAxisLines = true;
-        myGraph.enableReferenceAxisFrame = true;
+        myGraph.enableTouchReport = true
+        myGraph.enablePopUpReport = true
+        myGraph.enableYAxisLabel = false
+        myGraph.autoScaleYAxis = true
+        myGraph.enableReferenceXAxisLines = true
+        myGraph.enableReferenceYAxisLines = true
+        myGraph.enableReferenceAxisFrame = true
         
         myGraph.reloadGraph()
     }
@@ -77,13 +78,10 @@ class GraphViewController: UIViewController, BEMSimpleLineGraphDataSource, BEMSi
     }
     
     //PoupLabels
-    func lineGraph(graph: BEMSimpleLineGraphView, alwaysDisplayPopUpAtIndex index: CGFloat) -> Bool {
-        
-        
-        
-        return true
+    func popUpSuffixForlineGraph(graph: BEMSimpleLineGraphView) -> String {
+        return " MB"
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
