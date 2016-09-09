@@ -7,21 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C005D761D81F2C100E481E2 /* BEMSimpleLineGraphView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C005D6D1D81F2C100E481E2 /* BEMSimpleLineGraphView.m */; };
+		8C005D771D81F2C100E481E2 /* BEMCircle.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C005D6F1D81F2C100E481E2 /* BEMCircle.m */; };
+		8C005D781D81F2C100E481E2 /* BEMLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C005D711D81F2C100E481E2 /* BEMLine.m */; };
+		8C005D791D81F2C100E481E2 /* BEMAverageLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C005D731D81F2C100E481E2 /* BEMAverageLine.m */; };
+		8C005D7A1D81F2C100E481E2 /* BEMPermanentPopupView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C005D751D81F2C100E481E2 /* BEMPermanentPopupView.m */; };
 		8CB86FD31D818DB800EC229C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB86FD21D818DB800EC229C /* AppDelegate.swift */; };
-		8CB86FD51D818DB800EC229C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB86FD41D818DB800EC229C /* ViewController.swift */; };
+		8CB86FD51D818DB800EC229C /* GraphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CB86FD41D818DB800EC229C /* GraphViewController.swift */; };
 		8CB86FD81D818DB800EC229C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB86FD61D818DB800EC229C /* Main.storyboard */; };
 		8CB86FDA1D818DB800EC229C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CB86FD91D818DB800EC229C /* Assets.xcassets */; };
 		8CB86FDD1D818DB800EC229C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CB86FDB1D818DB800EC229C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C005D6C1D81F2C100E481E2 /* BEMSimpleLineGraphView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMSimpleLineGraphView.h; sourceTree = "<group>"; };
+		8C005D6D1D81F2C100E481E2 /* BEMSimpleLineGraphView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMSimpleLineGraphView.m; sourceTree = "<group>"; };
+		8C005D6E1D81F2C100E481E2 /* BEMCircle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMCircle.h; sourceTree = "<group>"; };
+		8C005D6F1D81F2C100E481E2 /* BEMCircle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMCircle.m; sourceTree = "<group>"; };
+		8C005D701D81F2C100E481E2 /* BEMLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMLine.h; sourceTree = "<group>"; };
+		8C005D711D81F2C100E481E2 /* BEMLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMLine.m; sourceTree = "<group>"; };
+		8C005D721D81F2C100E481E2 /* BEMAverageLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMAverageLine.h; sourceTree = "<group>"; };
+		8C005D731D81F2C100E481E2 /* BEMAverageLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMAverageLine.m; sourceTree = "<group>"; };
+		8C005D741D81F2C100E481E2 /* BEMPermanentPopupView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BEMPermanentPopupView.h; sourceTree = "<group>"; };
+		8C005D751D81F2C100E481E2 /* BEMPermanentPopupView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BEMPermanentPopupView.m; sourceTree = "<group>"; };
 		8CB86FCF1D818DB800EC229C /* Graph.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Graph.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CB86FD21D818DB800EC229C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8CB86FD41D818DB800EC229C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		8CB86FD41D818DB800EC229C /* GraphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphViewController.swift; sourceTree = "<group>"; };
 		8CB86FD71D818DB800EC229C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8CB86FD91D818DB800EC229C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8CB86FDC1D818DB800EC229C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8CB86FDE1D818DB800EC229C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8CB86FE51D818E0B00EC229C /* Graph-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Graph-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +70,33 @@
 		8CB86FD11D818DB800EC229C /* Graph */ = {
 			isa = PBXGroup;
 			children = (
+				8CB86FE41D818DBE00EC229C /* Class Graph */,
 				8CB86FD21D818DB800EC229C /* AppDelegate.swift */,
-				8CB86FD41D818DB800EC229C /* ViewController.swift */,
+				8CB86FD41D818DB800EC229C /* GraphViewController.swift */,
 				8CB86FD61D818DB800EC229C /* Main.storyboard */,
 				8CB86FD91D818DB800EC229C /* Assets.xcassets */,
 				8CB86FDB1D818DB800EC229C /* LaunchScreen.storyboard */,
 				8CB86FDE1D818DB800EC229C /* Info.plist */,
 			);
 			path = Graph;
+			sourceTree = "<group>";
+		};
+		8CB86FE41D818DBE00EC229C /* Class Graph */ = {
+			isa = PBXGroup;
+			children = (
+				8C005D6C1D81F2C100E481E2 /* BEMSimpleLineGraphView.h */,
+				8C005D6D1D81F2C100E481E2 /* BEMSimpleLineGraphView.m */,
+				8C005D6E1D81F2C100E481E2 /* BEMCircle.h */,
+				8C005D6F1D81F2C100E481E2 /* BEMCircle.m */,
+				8C005D701D81F2C100E481E2 /* BEMLine.h */,
+				8C005D711D81F2C100E481E2 /* BEMLine.m */,
+				8C005D721D81F2C100E481E2 /* BEMAverageLine.h */,
+				8C005D731D81F2C100E481E2 /* BEMAverageLine.m */,
+				8C005D741D81F2C100E481E2 /* BEMPermanentPopupView.h */,
+				8C005D751D81F2C100E481E2 /* BEMPermanentPopupView.m */,
+				8CB86FE51D818E0B00EC229C /* Graph-Bridging-Header.h */,
+			);
+			name = "Class Graph";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,8 +170,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8CB86FD51D818DB800EC229C /* ViewController.swift in Sources */,
+				8C005D7A1D81F2C100E481E2 /* BEMPermanentPopupView.m in Sources */,
+				8C005D781D81F2C100E481E2 /* BEMLine.m in Sources */,
+				8C005D771D81F2C100E481E2 /* BEMCircle.m in Sources */,
+				8CB86FD51D818DB800EC229C /* GraphViewController.swift in Sources */,
 				8CB86FD31D818DB800EC229C /* AppDelegate.swift in Sources */,
+				8C005D791D81F2C100E481E2 /* BEMAverageLine.m in Sources */,
+				8C005D761D81F2C100E481E2 /* BEMSimpleLineGraphView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,10 +289,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Graph/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.Graph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Graph/Graph-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -260,10 +303,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = Graph/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = br.Graph;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Graph/Graph-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -286,6 +331,7 @@
 				8CB86FE31D818DB800EC229C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
