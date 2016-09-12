@@ -33,6 +33,11 @@ class GraphViewController: UIViewController, BEMSimpleLineGraphDataSource, BEMSi
         myGraph.colorPoint = UIColor.whiteColor()
         myGraph.colorReferenceLines = UIColor.whiteColor()
         
+        myGraph.colorYaxisLabel = UIColor.clearColor()
+        myGraph.colorBackgroundYaxis = UIColor.whiteColor()
+        myGraph.colorXaxisLabel = UIColor.whiteColor()
+        myGraph.colorBackgroundXaxis = UIColor(red: 46/255, green: 139/255, blue: 176/255, alpha: 1)
+        
         //line, point and displayPoup
         myGraph.widthLine = 5
         myGraph.alwaysDisplayDots = true
@@ -50,8 +55,9 @@ class GraphViewController: UIViewController, BEMSimpleLineGraphDataSource, BEMSi
         // Enable and disable various graph properties and axis displays
         myGraph.enableTouchReport = true
         myGraph.enablePopUpReport = true
-        myGraph.enableYAxisLabel = false
+        myGraph.enableYAxisLabel = true
         myGraph.autoScaleYAxis = true
+        myGraph.enableXAxisLabel = true
         myGraph.enableReferenceXAxisLines = true
         myGraph.enableReferenceYAxisLines = true
         myGraph.enableReferenceAxisFrame = true
